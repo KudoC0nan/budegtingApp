@@ -1,11 +1,13 @@
+// loader
 import { useLoaderData } from "react-router-dom"
+// components
+import Intro from "../components/Intro"
 
 const Dashboard = () => {
     const { userName } = useLoaderData()
     return (
         <div>
-            {userName}
-            Dashboard
+            {userName ? (userName) : <Intro />}
         </div>
     )
 }
